@@ -87,35 +87,35 @@
     <div class="stock">
         <h1>See which products we have in stock</h1>
         <div class="stock_container">
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn build_Btn">
                 <h2>Build your PC today</h2>
                 <p>The newest hardware on the market</p>
             </button>
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn PSU_Btn">
                 <h2>PSUs</h2>
                 <p>Select your power supply unit(s)</p>
             </button>
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn MoBo_Btn">
                 <h2>MotherBoards</h2>
                 <p>Select your motherboard(s)</p>
             </button>
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn CPU_Btn">
                 <h2>CPUs</h2>
                 <p>Select your processor(s)</p>
             </button>
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn RAM_Btn">
                 <h2>RAM</h2>
                 <p>Select your RAM</p>
             </button>
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn SSD_Btn">
                 <h2>SSD & HDD</h2>
                 <p>Select your drive(s)</p>
             </button>
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn GPU_Btn">
                 <h2>GPUs</h2>
                 <p>Select your GPU(s)</p>
             </button>
-            <button class="stock_card myBtn">
+            <button class="stock_card myBtn shopping_Btn">
                 <h2>Shopping cart</h2>
                 <p>Your cart contains: </p>
                 <p>Your total comes to: </p>
@@ -127,10 +127,45 @@
 
     <div id="myModal" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Some text in the Modal..</p>
+          <span class="close">Done</span>
+          <p>Select your components: </p>
+          <ul id="PSU_supply">
+            <li>650W</li>
+            <li>850W</li>
+          </ul>
+          <ul id="MoBo_supply">
+            <li>Gigabyte Z790 Aorus Xtreme</li>
+            <li>Gigabyte Z690 Aorus Pro</li>
+          </ul>
+          <ul id="CPU_supply">
+            <li>Intel Core i5-13400</li>
+            <li>AMD Ryzen 5 7600</li>
+          </ul>
+          <ul id="RAM_supply">
+            <li>G.Skill Trident Z5 Neo RGB DDR5-6000 (2 x 16GB)</li>
+            <li>G.Skill Trident Z5 RGB DDR5-6000 (2 x 16GB)</li>
+          </ul>
+          <ul id="SSD_supply">
+            <li>Samsung 990 Pro</li>
+            <li>Western Digital Blue Desktop</li>
+          </ul>
+          <ul id="GPU_supply">
+            <li>RTX 4090</li>
+            <li>RTX 4070</li>
+          </ul>
+          <ul id="shopping_cart">
+            <li>PSUs: </li>
+            <li>MoBos: </li>
+            <li>CPUs: </li>
+            <li>RAM: </li>
+            <li>SSDs & HDDs: </li>
+            <li>GPUs: </li>
+            <li>Total cost: </li>
+          </ul>
         </div>
     </div>
+
+    <!-- Footer -->
 
     <script src="app.js"></script>
 </body>

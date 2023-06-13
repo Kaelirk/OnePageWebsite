@@ -350,7 +350,7 @@
 
     .main_btn {
         padding: 12px 36px;
-        marign: 2.5rem 0;
+        margin: 2.5rem 0;
     }
 }
 
@@ -455,7 +455,34 @@
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+
+  .PSU_supply {
+    display: none;
+  }
   
+  .MoBo_supply {
+    display: none;
+  }
+
+  .CPU_supply {
+    display: none;
+  }
+
+  .RAM_supply {
+    display: none;
+  }
+
+  .SSD_supply {
+    display: none;
+  }
+
+  .GPU_supply {
+    display: none;
+  }
+
+  .shopping_cart {
+    display: none;
+  }
   /* The Close Button */
   .close {
     color: #aaa;
@@ -470,3 +497,7 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* Footer CSS */
+
+  
