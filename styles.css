@@ -432,6 +432,59 @@
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(19,19,19,0.8) 100%), url(/images/pic9.jpg);
 }
 
+.quantity {
+    margin-left: 50px;
+}
+
+.counter{
+width: 20px;
+text-align: center;
+outline: groove;
+margin-left: 4px;
+margin-right: 4px;
+border-radius: 40px;
+background-color: #ff7300;
+}
+
+.plusBtn{
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: ridge;
+    border-radius: 40px;
+    background: rgb(255, 115, 0);
+    color: rgb(0, 0, 0);
+}
+
+.plusBtn:hover {
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-transition: all 0.2s ;
+    transition: all 0.2s;
+    cursor: pointer;
+    transform: scale(1.05);
+    background: rgb(151, 151, 255)
+}
+
+.minusBtn{
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: ridge;
+    border-radius: 40px;
+    background: rgb(255, 115, 0);
+    color: rgb(0, 0, 0);
+}
+
+.minusBtn:hover {
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-transition: all 0.2s ;
+    transition: all 0.2s;
+    cursor: pointer;
+    transform: scale(1.05);
+    background: rgb(151, 151, 255)
+}
 /*El modal*/
 
 .modal {
@@ -497,6 +550,8 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+ 
 
   /* Footer CSS */
 
