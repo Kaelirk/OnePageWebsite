@@ -75,7 +75,7 @@
                 <h1>Business oriented PC building</h1>
                 <h2>Quick & Easy</h2>
                 <p>Select your components and send us your order, we take care of the rest!</p>
-                <button class="main_btn"><a href="/">Get started</a></button>
+                <button class="main_btn">Get started</button>
             </div>
             <div class="main_img--cotainer">
                 <img src="images/pic1.svg" alt="pic" id="main_img">
@@ -87,11 +87,11 @@
     <div class="stock">
         <h1>See which products we have in stock</h1>
         <div class="stock_container">
-            <button class="stock_card myBtn build_Btn">
+            <button class="stock_card build_Btn">
                 <h2>Build your PC today</h2>
                 <p>The newest hardware on the market</p>
             </button>
-            <button class="stock_card myBtn PSU_Btn">
+            <button id="firstBtn" class="stock_card myBtn PSU_Btn">
                 <h2>PSUs</h2>
                 <p>Select your power supply unit(s)</p>
             </button>
@@ -117,110 +117,151 @@
             </button>
             <button class="stock_card myBtn shopping_Btn">
                 <h2>Shopping cart</h2>
-                <p>Your cart contains: </p>
-                <p>Your total comes to: </p>
+                <p>Review your selections</p>
             </button>
         </div>
     </div>
 
-    <!-- El MODAL -->
+    <!-- MODAL -->
 
     <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">Done</span>
-          <p>Select your components: </p>
           <ul class="PSU_supply">
+            <p>Select your components: </p>
             <li>650W</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="PSU1">&minus;</button>
                 <input class="counter" type="text" value="0" readonly />
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="PSU1">&plus;</button>
             </div>
             <li>850W</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="PSU2">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="PSU2">&plus;</button>
             </div>
           </ul>
           <ul class="MoBo_supply">
+            <p>Select your components: </p>
             <li>Gigabyte Z790 Aorus Xtreme</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="MoBo1">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="MoBo1">&plus;</button>
             </div>
             <li>Gigabyte Z690 Aorus Pro</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="MoBo2">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="MoBo2">&plus;</button>
             </div>
           </ul>
           <ul class="CPU_supply">
+            <p>Select your components: </p>
             <li>Intel Core i5-13400</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="CPU1">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="CPU1">&plus;</button>
             </div>
             <li>AMD Ryzen 5 7600</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="CPU2">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="CPU2">&plus;</button>
             </div>
           </ul>
           <ul class="RAM_supply">
+            <p>Select your components: </p>
             <li>G.Skill Trident Z5 Neo RGB DDR5-6000 (2 x 16GB)</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="RAM1">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="RAM1">&plus;</button>
             </div>
             <li>G.Skill Trident Z5 RGB DDR5-6000 (2 x 16GB)</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="RAM2">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="RAM2">&plus;</button>
             </div>
           </ul>
           <ul class="SSD_supply">
+            <p>Select your components: </p>
             <li>Samsung 990 Pro</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="SSD1">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="SSD1">&plus;</button>
             </div>
             <li>Western Digital Blue Desktop</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="SSD2">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="SSD2">&plus;</button>
             </div>
           </ul>
           <ul class="GPU_supply">
+            <p>Select your components: </p>
             <li>RTX 4090</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="GPU1">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="GPU1">&plus;</button>
             </div>
             <li>RTX 4070</li>
             <div class="quantity">
-                <button class="minusBtn">&minus;</button>
+                <button class="minusBtn" id="GPU2">&minus;</button>
                 <input class="counter" type="text" value="0" readonly/>
-                <button class="plusBtn">&plus;</button>
+                <button class="plusBtn" id="GPU2">&plus;</button>
             </div>
           </ul>
           <ul class="shopping_cart">
-            <li class="PSU_supply">PSUs: </li>
-            <li class="MoBo_supply">MoBos: </li>
-            <li class="CPU_supply">CPUs: </li>
-            <li class="RAM_supply">RAM: </li>
-            <li class="SSD_supply">SSDs & HDDs: </li>
-            <li class="GPU_supply">GPUs: </li>
-            <li class="Total_cost">Total cost: </li>
+            <li class="PSU_supply">PSUs:
+                <p>650W: </p>
+                <li id="cart_PSU1"  class="Shop_counter" type="text" value="0" readonly></li>
+                <p>850W:  </p>
+                <li id="cart_PSU2"class="Shop_counter" type="text" value="0" readonly></li>
+            </li>
+            <br>
+            <li class="MoBo_supply">MoBos: 
+                <p>Gigabyte Z790 Aorus Xtreme: </p>
+                <li id="cart_MoBo1"  class="Shop_counter" type="text" value="0" readonly></li>
+                <p>Gigabyte Z690 Aorus Pro: </p>
+                <li id="cart_MoBo2" class="Shop_counter" type="text" value="0" readonly></li>
+            </li>
+            <br>
+            <li class="CPU_supply">CPUs: 
+                <p>Intel Core i5-13400: </p>
+                <li id="cart_CPU1" class="Shop_counter" type="text" value="0" readonly></li>
+                <p>AMD Ryzen 5 7600: </p>
+                <li id="cart_CPU2"  class="Shop_counter" type="text" value="0" readonly></li>
+            </li>
+            <br>
+            <li class="RAM_supply">RAM: 
+                <p>G.Skill Trident Z5 Neo RGB: </p>
+                <li id="cart_RAM1"  class="Shop_counter" type="text" value="0" readonly></li>
+                <p>G.Skill Trident Z5 RGB: </p>
+                <li id="cart_RAM2" class="Shop_counter" type="text" value="0" readonly></li>
+            </li>
+            <br>
+            <li class="SSD_supply">SSDs & HDDs: 
+                <p>Samsung 990 Pro: </p>
+                <li id="cart_SSD1"  class="Shop_counter" type="text" value="0" readonly></li>
+                <p>Western Digital Blue Desktop: </p>
+                <li id="cart_SSD2" class="Shop_counter" type="text" value="0" readonly></li>
+            </li>
+            <br>
+            <li class="GPU_supply">GPUs: 
+                <p>RTX 4090: </p>
+                <li id="cart_GPU1"  class="Shop_counter" type="text" value="0" readonly></li>
+                <p>RTX 4070: </p>
+                <li id="cart_GPU2" class="Shop_counter" type="text" value="0" readonly></li>
+            </li>
+            <br>
+            <li>All our products cost €100, your total comes to: </li>
+            <li class="Total_cost"></li>
           </ul>
         </div>
     </div>
