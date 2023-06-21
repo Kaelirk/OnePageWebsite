@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnePageWebiste</title>
+    <!--importing the CSS contained in the styles.css file-->
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://use.fontawesome.com/4b8d51d3d0.js"></script>
+    <!--importing the fontawesome icons-->
+    <script src="https://use.fontawesome.com/4b8d51d3d0.js"></script> 
 </head>
 <body>
-    <!-- Page header -->
-    <nav class="navbar">
-        <div class="navbar_container">
-            <a href="/" id="fa-cube"><i class="fa fa-cube"></i></a>
-            <div class="navbar_toggle" id="mobile-menu">
+    <!-- Page header, the following HTML contains the elements that will be displayed at the top of the screen.
+     -->
+
+    <nav class="navbar"> <!--creating a navbar to be used as the navbar background-->
+        <div class="navbar_container"> <!--creating a "box" in which all the navbar elements are contained-->
+            <a href="/" id="fa-cube"><i class="fa fa-cube"></i></a> <!--imported fa-cube icon-->
+            <div class="navbar_toggle" id="mobile-menu"> <!--container for the dropdown menu toggle bars-->
+                <!--creating 3 bars to be animated and used as a toggle for the dropdown menu-->
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar_menu">
+            <!--the navbar menu seen at the top of the screen, none of the buttons link to anything
+            think of them as display models or prototypes.
+            Each element is assigned a class to ensure they are stylable via the CSS sheet-->
+            <ul class="navbar_menu"> 
                 <li class="navbar_item">
                     <a href="/" class="navbar_links">
                         Home
@@ -68,7 +76,9 @@
         </div>
     </nav>
 
-    <!-- page body -->
+    <!-- page body, this section contains all the elements that are visible in the main body of the page. -->
+    <!-- Once again, an element is created to serve as the background on the page and then a container is creating to serve as the
+    box holding all the elements of the page. This this is mostly useful for styling and positioning-->
     <div class="main">
         <div class="main_container">
             <div class="main_content">
@@ -77,20 +87,26 @@
                 <p>Select your components and send us your order, we take care of the rest!</p>
                 <button class="main_btn">Get started</button>
             </div>
+            <!--This segment contains a background picture for the landing area of the page. 
+            This will likely not be visible when you run the code.-->
             <div class="main_img--cotainer">
                 <img src="images/pic1.svg" alt="pic" id="main_img">
             </div>
         </div>
     </div>
 
-    <!-- stock -->
+    <!-- stock, this area contains the buttons and images seen underneath the landing area of the page.
+    From here, users can access the modal and select which computer parts they wish to see a list of. -->
     <div class="stock">
         <h1>See which products we have in stock</h1>
+        <!--Creating a container in which all the elements of the stock section will be contained.-->
         <div class="stock_container">
+            <!--Each button is assigned classes for use when assigning JS and CSS -->
             <button class="stock_card build_Btn">
                 <h2>Build your PC today</h2>
                 <p>The newest hardware on the market</p>
             </button>
+            <!--The following button was assigned an ID to use as a "scrollintoview" anchor to jump to-->
             <button id="firstBtn" class="stock_card myBtn PSU_Btn">
                 <h2>PSUs</h2>
                 <p>Select your power supply unit(s)</p>
@@ -122,11 +138,15 @@
         </div>
     </div>
 
-    <!-- MODAL -->
-
+    <!-- MODAL, in the following section, elements contained within the modal are instantiated -->
+    <!-- the modal is created as well as a container for the contents of the modal-->
     <div id="myModal" class="modal">
         <div class="modal-content">
+            <!--A span created as a element hat will serve as a button to close modal-->
           <span class="close">Done</span>
+          <!--Each element is assigned a class for JS and CSS purposes.
+                Each button for each item is assigned to an ID to be used in the JS file
+                Each element remains read only to avoid tampering.-->
           <ul class="PSU_supply">
             <p>Select your components: </p>
             <li>650W</li>
@@ -217,6 +237,9 @@
                 <button class="plusBtn" id="GPU2">&plus;</button>
             </div>
           </ul>
+          <!--the following segment contains the contents of the shopping cart.
+            Each item is assigned another ID that links them to JS.
+            They are all set to readonly to avoided tampering.-->
           <ul class="shopping_cart">
             <li class="PSU_supply">PSUs:
                 <p>650W: </p>
@@ -260,6 +283,8 @@
                 <li id="cart_GPU2" class="Shop_counter" type="text" value="0" readonly></li>
             </li>
             <br>
+            <!-- the following segment links to the calculation of the total price.
+            For simplicity sake all items have the same price.-->
             <li>All our products cost €100, your total comes to: </li>
             <li class="Total_cost"></li>
           </ul>

@@ -1,3 +1,5 @@
+/*The CSS below determines the margin and padding of the entire background of the webpage
+it also contains the chosen font that will be used on the website. */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +7,7 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
+/*The CSS below determines the appearance of the navbar section of the page.*/
 .navbar {
     background-color: black;
     height: 90px;
@@ -16,7 +19,8 @@
     top: 0;
     z-index: 10000;
 }
-
+/*The CSS below determines the appearance of the box in which each element of the navbar
+is contained.*/
 .navbar_container {
     display: flex;
     justify-content: space-between;
@@ -27,7 +31,7 @@
     margin: 0 auto;
     padding: 0 50px;
 }
-
+/*The CSS below determines the appearance of the cube icon used at the top of the page.*/
 #fa-cube {
     background-color: blue;
     background-image: linear-gradient(to top, rgb(0, 0, 255) 0%, #ff7300 100%
@@ -43,18 +47,18 @@
     text-decoration: none;
     font-size: 4rem
 }
-
+/*The CSS below determines the appearance of the menu containing the items running along the top of the page*/
 .navbar_menu {
     display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
 }
-
+/*The CSS below determines the size of each item in the previous menu*/
 .navbar_item {
     height: 90px;
 }
-
+/*The CSS below determines the appearance of each hyperlink/item in the menu*/
 .navbar_links {
     color: blue;
     display: flex;
@@ -64,7 +68,8 @@
     padding: 0 1rem;
     height: 100%;
 }
-
+/*The CSS below determines the appearance of the box containing the "submit" order button 
+at the top right of the screen*/
 .navbar_btn {
     display: flex;
     justify-content: center;
@@ -72,7 +77,7 @@
     padding: 0 1rem;
     width: 100%;
 }
-
+/*The CSS below determines the appearance of the submit order button itself*/
 .button {
     display: flex;
     justify-content: center;
@@ -88,17 +93,20 @@
     background: rgb(255, 115, 0);
     color: rgb(0, 0, 0);
 }
-
+/*The CSS below determines the animation that occurs when the mouse is hovered over the button*/
 .button:hover {
     background-color: #9797ff;
     transition: all 0.2s ease;
 }
-
+/*The CSS below determines the animation that occurs when the navbar hyperlinks/items are hovered over*/
 .navbar_links:hover {
     color: rgb(151, 151, 255);
     transition: all 0.2s ease;
 }
-
+/*The CSS below determines the screen size at which the subsequent css is applied to
+The items previously covered.
+The CSS below determines the appearance of the menu, links/items of the navbar that are contained
+in the dropdown meny once the smaller screen size is reached.*/
 @media screen and (max-width: 960px) {
     .navbar_container {
         display: flex;
@@ -109,7 +117,6 @@
         max-width: 1300px;
         padding: 0;
     }
-
     .navbar_menu {
         display: grid;
         grid-template-columns: auto;
@@ -122,7 +129,6 @@
         height: 50vh;
         z-index: -1;
     }
-
     .navbar_menu.active {
         background: black;
         top: 100%;
@@ -132,11 +138,9 @@
         height: 90vh;
         font-size: 1.6rem;
     }
-
     #navbar_image {
         padding-left: 25px;
     }
-
     .navbar_toggle .bar {
         width: 25px;
         height: 3px;
@@ -144,11 +148,9 @@
         transition: all 0.3s ease-in-out;
         background: rgb(255, 115, 0);
         }
-
         .navbar_item {
             width: 100%
         }
-
     .navbar_links {
         text-align: center;
         padding: 2rem;
@@ -180,26 +182,27 @@
         display: block;
         cursor: pointer;
     }
-
+    /*The CSS below determines the animation of the mobile menu bars in the top left of the screen.
+    Once activated, the top and button bar rotate 45 degrees and the middlebar disappears.*/
     #mobile-menu.activated .bar:nth-child(2) {
         opacity: 0;
     }
-
+    /*The CSS below determines*/
     #mobile-menu.activated .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-
+    /*The CSS below determines*/
     #mobile-menu.activated .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
 
 /*main page CSS*/
-
+/*The CSS below determines the appearance of the main area of the page.*/
 .main {
     background-color: black;
 }
-
+/*The CSS below determines the appearance of the container in which the elements of the main page are contained*/
 .main_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,7 +216,8 @@
     max-width: 1440px;
     padding: 0 50px;
 }
-
+/*The CSS below determines the appearance and position of the elements found in the
+h1, h2 and p segments of the main page.*/
 .main_content h1 {
     font-size: 4rem;
     background-color: #ff7300;
@@ -249,7 +253,7 @@
     -moz-text-fill-color: transparent
     
 }
-
+/*The CSS below determines the apperance of the "get started" button*/
 .main_btn {
     font-size: 1.2rem;
     background-image: linear-gradient(to top, rgb(255, 0, 0) 0%, #00e1ff 100%
@@ -271,7 +275,8 @@
     color: #fff;
     text-decoration: none;
 }
-
+/*The CSS below determines the appearance of the button after it has been interacted with.
+in this case, the appearanced is change by hovering.*/
 .main_btn::after {
     position: absolute;
     content: '';
@@ -284,24 +289,22 @@
     border-radius: 4px;
 }
 
-.main_btn:hover {
-    color: #fff;
-}
-
 .main_btn:hover:after {
     width: 100%;
 }
-
+/*The CSS below determines the position of the container of the image on the main page*/
 .main_img--container {
     text-align: center;
 }
-
+/*The CSS below determines the size of the picture on the main page*/
 #main_img {
     height: 80%;
     width: 80%;
 }
 
 /*mobile css*/
+/*The CSS below determines the appearance of the main page and its elements when
+a smaller screen size is reached.*/
 @media screen and (max-width: 768px) {
     .main_container {
         display: grid;
@@ -312,7 +315,6 @@
         margin: 0 auto;
         height: 90vh;
     }
-    
     .main_content {
         text-align: center;
         margin-bottom: 4rem;
@@ -332,22 +334,24 @@
         font-size: 1.5rem;
     }
 }
-
+/*The CSS below determines yet againt the appearance of the main page at an
+even smaller screen size.*/
 @media screen and (max-width: 480px){
+    
     .main_content h1 {
         font-size: 2rem;
         margin-top: 3rem;
     }
-
+    
     .main_content h2 {
         font-size: 2rem;
     }
-
+    
     .main_content h3 {
         margin-top: 2rem;
         font-size: 1.5rem;
     }
-
+    
     .main_btn {
         padding: 12px 36px;
         margin: 2.5rem 0;
@@ -355,15 +359,15 @@
 }
 
 /* stock section CSS*/
-
+/*The CSS below determines the appearance of the stock section of the page along with its elements.*/
 .stock {
     background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 250vh;
+    height: 100%;
 }
-
+/*The CSS below determines the appearance of the intro text to the stock section*/
 .stock h1 {
     background-color: #ff7300;
     background-image: linear-gradient(to right, #ffd5b3 0%, #ff7300 100%
@@ -376,13 +380,13 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent
 }
-
+/*The CSS below determines the size and behaviour of the box containing the stock elements*/
 .stock_container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
+/*The CSS below determines the size and appearance of the pictures that serve as buttons to access the modal*/
 .stock_card {
     margin: 1rem;
     height: 525px;
@@ -393,7 +397,7 @@
     position: relative;
     color: #fff;
 }
-
+/*The CSS below determines the animation of hovering one of the images in the stock section*/
 .myBtn:hover {
     box-shadow:0px 0px 30px #fff;
     -moz-transition: all 0.2s;
@@ -403,7 +407,7 @@
     cursor: pointer;
     transform: scale(1.02);
 }
-
+/*The CSS below determines the background behind the images of the stock section*/
 .stock_card:nth-child(2) {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(19,19,19,0.8) 100%), url(/images/pic7.jpg);
 }
@@ -431,11 +435,12 @@
 .stock_card:nth-child(8) {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(19,19,19,0.8) 100%), url(/images/pic9.jpg);
 }
-
+/*The CSS below determines the position of the + and - symbol on the modal*/
 .quantity {
     margin-left: 50px;
 }
-
+/*The CSS below determines the appearance of the counter and the + and - symbols
+As well as providing a minor animation when hovered over.*/
 .counter{
 width: 20px;
 text-align: center;
@@ -485,34 +490,38 @@ background-color: #ff7300;
     transform: scale(1.05);
     background: rgb(151, 151, 255)
 }
-/*El modal*/
-
+/*The modal*/
+/*The CSS below determines the appearance and position of the modal.
+A number of elements in this segment are hidden by default, the JS is the used
+to display them when the appropriate event is triggered*/
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
   }
   
   /* Modal Content/Box */
+  /*The CSS below determines the position of the content found inside the modal*/
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 50%; 
   }
-
+  /*by default, all the n_supply elements are hidden. This is to ensure users only
+  see information relevant to the stockbutton/card they activated.*/
   .PSU_supply {
     display: none;
   }
-  
+
   .MoBo_supply {
     display: none;
   }
@@ -545,22 +554,17 @@ background-color: #ff7300;
     display: block;
   }
   /* The Close Button */
+  /*The CSS below determines the appearance of "done" button on the modal*/
   .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
-  
+  /*The CSS below determines a minor animation for the "done" button*/
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
-
- 
-
-  /* Footer CSS */
-
-  
