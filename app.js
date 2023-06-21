@@ -6,9 +6,10 @@ menu.addEventListener('click', function() {
     menuLinks.classList.toggle('active');
 });
 
-
+const getstarted = document.querySelectorAll(".main_btn")
 const modal = document.getElementById("myModal");
 const btn = document.querySelectorAll(".myBtn");
+const bldbtn = document.querySelectorAll(".build_Btn");
 const psubtn = document.querySelectorAll(".PSU_Btn");
 const mobobtn = document.querySelectorAll(".MoBo_Btn");
 const cpubtn = document.querySelectorAll(".CPU_Btn");
@@ -28,11 +29,27 @@ const qty = document.getElementById("quantity");
 const counter = document.querySelectorAll(".counter");
 const minusbtn = document.querySelectorAll(".minusBtn");
 const plusbtn = document.querySelectorAll(".plusBtn");
+const shopcounter = document.querySelectorAll(".Shop_counter");
+const totalcost= document.querySelectorAll(".Total_cost");
 
 btn.forEach(function (element){
     element.addEventListener('click', function() {
         modal.style.display = "block";
     });
+});
+
+bldbtn.forEach(function (element){
+    element.addEventListener('click', function(){
+        let target = document.getElementById("firstBtn");
+          target.scrollIntoView();
+    });
+});
+
+getstarted.forEach(function (element){
+  element.addEventListener('click', function(){
+      let target = document.getElementById("firstBtn");
+        target.scrollIntoView();
+  });
 });
 
 psubtn.forEach(function (element){
@@ -74,6 +91,13 @@ gpubtn.forEach(function (element){
 cartbtn.forEach(function (element){
   element.addEventListener('click', function() {
       cart[0].style.display = "block";
+      psu[1].style.display = "block";
+      mobo[1].style.display = "block";
+      cpu[1].style.display = "block";
+      ram[1].style.display = "block";
+      ssd[1].style.display = "block";
+      psu[1].style.display = "block";
+      gpu[1].style.display = "block";
 });
 });
 
@@ -101,25 +125,46 @@ window.onclick = function(event) {
     cart[0].style.display = "none";
   }
 }
+
 minusbtn.forEach(function (element){
   let relativecounter = element.parentElement.getElementsByTagName("input")[0];
-  console.log(relativecounter.value);
   element.addEventListener('click', function() {
-    console.log(element.parentElement.parentElement.id);
     if (relativecounter.value > 0){
     relativecounter.value = parseInt(relativecounter.value) -1;
     }
+
+    let cartItemId = 'cart_' + element.id;
+  let counterToDecrease = document.getElementById(cartItemId);
+  if (counterToDecrease.value > 0){
+  counterToDecrease.value = parseInt(counterToDecrease.value) - 1;
+  counterToDecrease.innerHTML = counterToDecrease.value;}
+  calculateTotal();
   });
 });
 
 plusbtn.forEach(function (element){
   let relativecounter = element.parentElement.getElementsByTagName("input")[0];
-  console.log(relativecounter.value);
-  element.addEventListener('click', function() {
-    console.log(element.parentElement.parentElement.id);
-    relativecounter.value = parseInt(relativecounter.value) +1;
+   element.addEventListener('click', function() {
+     relativecounter.value = parseInt(relativecounter.value) +1;
+  
+
+  let cartItemId = 'cart_' + element.id;
+  let counterToIncrease = document.getElementById(cartItemId);
+  counterToIncrease.value = parseInt(counterToIncrease.value) + 1;
+  counterToIncrease.innerHTML = counterToIncrease.value;
+  calculateTotal();
   });
 });
+
+function calculateTotal() {
+  let itemCount = parseInt(document.getElementById("cart_PSU1").value) +  parseInt(document.getElementById("cart_PSU2").value) + parseInt(document.getElementById("cart_MoBo1").value) + 
+  parseInt(document.getElementById("cart_MoBo2").value) + parseInt(document.getElementById("cart_CPU1").value) + parseInt(document.getElementById("cart_CPU2").value) + 
+  parseInt(document.getElementById("cart_RAM1").value) + parseInt(document.getElementById("cart_RAM2").value) + parseInt(document.getElementById("cart_SSD1").value) + 
+  parseInt(document.getElementById("cart_SSD2").value) + parseInt(document.getElementById("cart_GPU1").value) + parseInt(document.getElementById("cart_GPU2").value);
+  console.log(itemCount); 
+  totalcost[0].innerHTML = "€" + itemCount * 100;
+  console.log(totalcost[0].innerHTML);
+};
 
 
 /*JS for shoppingcart:
